@@ -1,271 +1,275 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>DIZA COLLECTION</title>
+    <title>DIZA COLLECTION | Boutique officielle</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8f5f0;
-      color: #44372b;
-    }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f8f5f0;
+            color: #44372b;
+        }
 
-    header {
-      background: #44372b;
-      color: white;
-      text-align: center;
-      padding: 35px 15px;
-    }
+        header {
+            background: #44372b;
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
 
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-      letter-spacing: 3px;
-    }
+        header h1 {
+            margin: 0;
+            font-size: 35px;
+            letter-spacing: 3px;
+        }
 
-    header p {
-      color: #e8d5b5;
-      font-size: 17px;
-    }
+        header p {
+            color: #e5c99b;
+            margin-bottom: 0;
+        }
 
-    nav {
-      background: #c5a46d;
-      text-align: center;
-      padding: 16px;
-    }
+        nav {
+            background: #6b5542;
+            text-align: center;
+            padding: 15px;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
 
-    nav a:hover {
-      color: #44372b;
-    }
+        nav a:hover {
+            color: #e5c99b;
+        }
 
-    .presentation {
-      text-align: center;
-      padding: 45px 20px;
-    }
+        .accueil {
+            text-align: center;
+            padding: 65px 20px;
+            background: #eee5d9;
+        }
 
-    .presentation h2 {
-      font-size: 28px;
-    }
+        .accueil h2 {
+            font-size: 30px;
+        }
 
-    .presentation p {
-      font-size: 17px;
-      line-height: 1.6;
-    }
+        .accueil p {
+            font-size: 17px;
+        }
 
-    .section-titre {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 27px;
-    }
+        .collection {
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-    .produits {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      padding: 20px;
-    }
+        .collection h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
 
-    .article {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      width: 250px;
-      text-align: center;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.10);
-      transition: transform 0.3s;
-    }
+        .produits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
 
-    .article:hover {
-      transform: translateY(-5px);
-    }
+        .produit {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 260px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
 
-    .article img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
+        .produit:hover {
+            transform: translateY(-5px);
+        }
 
-    .article h3 {
-      color: #44372b;
-    }
+        .produit img {
+            width: 100%;
+            height: 240px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
 
-    .prix {
-      font-size: 21px;
-      font-weight: bold;
-      color: #a47b39;
-    }
+        .produit h3 {
+            margin-top: 15px;
+        }
 
-    .contact {
-      text-align: center;
-      padding: 35px 20px;
-    }
+        .prix {
+            font-size: 19px;
+            font-weight: bold;
+            color: #9b753d;
+        }
 
-    footer {
-      background: #44372b;
-      color: white;
-      text-align: center;
-      padding: 30px 15px;
-      margin-top: 30px;
-    }
+        .acheter {
+            display: inline-block;
+            background: #44372b;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 10px;
+            font-weight: bold;
+        }
 
-    footer p {
-      line-height: 1.6;
-    }
+        .acheter:hover {
+            background: #9b753d;
+        }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 27px;
-      }
+        .contact {
+            background: #eee5d9;
+            text-align: center;
+            padding: 40px 20px;
+        }
 
-      nav a {
-        display: inline-block;
-        margin: 8px;
-      }
+        footer {
+            background: #44372b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
 
-      .article {
-        width: 90%;
-        max-width: 300px;
-      }
-    }
-  </style>
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 27px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .produit {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- EN-TÊTE -->
-  <header>
-    <h1>DIZA COLLECTION</h1>
-    <p>Élégance, beauté et style</p>
-  </header>
+    <!-- EN-TÊTE -->
+    <header>
+        <h1>DIZA COLLECTION</h1>
+        <p>Élégance • Style • Qualité</p>
+    </header>
 
-  <!-- MENU -->
-  <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#femmes">Femmes</a>
-    <a href="#hommes">Hommes</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <!-- MENU -->
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#femmes">Femme</a>
+        <a href="#hommes">Homme</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-  <!-- ACCUEIL -->
-  <section class="presentation" id="accueil">
-    <h2>Bienvenue chez DIZA COLLECTION</h2>
+    <!-- ACCUEIL -->
+    <section class="accueil" id="accueil">
+        <h2>Bienvenue chez DIZA COLLECTION</h2>
+        <p>Découvrez notre sélection de vêtements, chaussures et accessoires.</p>
+        <p>Votre élégance, notre passion.</p>
+    </section>
 
-    <p>
-      Découvrez notre collection de vêtements,
-      chaussures, sacs et accessoires.
-    </p>
+    <!-- COLLECTION FEMME -->
+    <section class="collection" id="femmes">
+        <h2>Collection Femme</h2>
 
-    <p>
-      Trouvez votre style et affirmez votre élégance !
-    </p>
-  </section>
+        <div class="produits">
 
-  <!-- ARTICLES FEMMES -->
-  <h2 class="section-titre" id="femmes">
-    Nos articles pour femmes
-  </h2>
+            <div class="produit">
+                <h3>Robe élégante</h3>
+                <img src="diza-robe-femme.png" alt="Robe élégante">
+                <p class="prix">120 €</p>
+                <a class="acheter" href="https://wa.me/TONNUMERO?text=Bonjour%2C%20je%20souhaite%20commander%20la%20robe%20%C3%A9l%C3%A9gante">
+                    Acheter
+                </a>
+            </div>
 
-  <div class="produits">
+            <div class="produit">
+                <h3>Sac à main</h3>
+                <img src="diza-sac-a-main.png" alt="Sac à main">
+                <p class="prix">70,99 €</p>
+                <a class="acheter" href="https://wa.me/TONNUMERO?text=Bonjour%2C%20je%20souhaite%20commander%20le%20sac%20%C3%A0%20main">
+                    Acheter
+                </a>
+            </div>
 
-    <div class="article">
-      <h3>Robe élégante</h3>
-      <img
-        src="https://dizadelflow52-eng.github.io/mon-premier-site/diza-robe-femme.png"
-        alt="Robe élégante">
-      <p class="prix">120 €</p>
-    </div>
+            <div class="produit">
+                <h3>Chaussures femme</h3>
+                <img src="diza-chaussures-femme.png" alt="Chaussures femme">
+                <p class="prix">60,96 €</p>
+                <a class="acheter" href="https://wa.me/TONNUMERO?text=Bonjour%2C%20je%20souhaite%20commander%20les%20chaussures%20femme">
+                    Acheter
+                </a>
+            </div>
 
-    <div class="article">
-      <h3>Sac à main</h3>
-      <img
-        src="https://dizadelflow52-eng.github.io/mon-premier-site/diza-sac-a-main.png"
-        alt="Sac à main">
-      <p class="prix">70,99 €</p>
-    </div>
+        </div>
+    </section>
 
-    <div class="article">
-      <h3>Chaussures femme</h3>
-      <img
-        src="https://dizadelflow52-eng.github.io/mon-premier-site/diza-chaussures-femme.png"
-        alt="Chaussures femme">
-      <p class="prix">60,96 €</p>
-    </div>
+    <!-- COLLECTION HOMME -->
+    <section class="collection" id="hommes">
+        <h2>Collection Homme</h2>
 
-  </div>
+        <div class="produits">
 
-  <!-- ARTICLES HOMMES -->
-  <h2 class="section-titre" id="hommes">
-    Nos articles pour hommes
-  </h2>
+            <div class="produit">
+                <h3>Ensemble homme</h3>
+                <img src="diza-costume-homme.png" alt="Ensemble homme">
+                <p class="prix">160 €</p>
+                <a class="acheter" href="https://wa.me/TONNUMERO?text=Bonjour%2C%20je%20souhaite%20commander%20l%27ensemble%20homme">
+                    Acheter
+                </a>
+            </div>
 
-  <div class="produits">
+            <div class="produit">
+                <h3>Chaussures homme</h3>
+                <img src="diza-chaussures-homme.png" alt="Chaussures homme">
+                <p class="prix">80,99 €</p>
+                <a class="acheter" href="https://wa.me/TONNUMERO?text=Bonjour%2C%20je%20souhaite%20commander%20les%20chaussures%20homme">
+                    Acheter
+                </a>
+            </div>
 
-    <div class="article">
-      <h3>Ensemble homme</h3>
-      <img
-        src="https://dizadelflow52-eng.github.io/mon-premier-site/diza-costume-homme.png"
-        alt="Ensemble homme">
-      <p class="prix">160 €</p>
-    </div>
+            <div class="produit">
+                <h3>Accessoires homme</h3>
+                <img src="diza-accessoires-homme.png" alt="Accessoires homme">
+                <p class="prix">45,99 €</p>
+                <a class="acheter" href="https://wa.me/TONNUMERO?text=Bonjour%2C%20je%20souhaite%20commander%20les%20accessoires%20homme">
+                    Acheter
+                </a>
+            </div>
 
-    <div class="article">
-      <h3>Chaussures homme</h3>
-      <img
-        src="https://dizadelflow52-eng.github.io/mon-premier-site/diza-chaussures-homme.png"
-        alt="Chaussures homme">
-      <p class="prix">80,99 €</p>
-    </div>
+        </div>
+    </section>
 
-    <div class="article">
-      <h3>Accessoires homme</h3>
-      <img
-        src="https://dizadelflow52-eng.github.io/mon-premier-site/diza-accessoires-homme.png"
-        alt="Accessoires homme">
-      <p class="prix">45,99 €</p>
-    </div>
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <h2>Contactez-nous</h2>
+        <p>Une question ou une commande ? Contactez DIZA COLLECTION sur WhatsApp.</p>
 
-  </div>
+        <a class="acheter" href="https://wa.me/TONNUMERO">
+            Nous contacter
+        </a>
+    </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <h2>Contactez-nous</h2>
-
-    <p>Vous aimez nos articles ?</p>
-
-    <p>
-      Pour toute commande ou information,
-      contactez DIZA COLLECTION.
-    </p>
-  </section>
-
-  <!-- PIED DE PAGE -->
-  <footer>
-    <h2>DIZA COLLECTION</h2>
-
-    <p>Merci de visiter notre boutique !</p>
-
-    <p>
-      © 2026 DIZA COLLECTION - Tous droits réservés.
-    </p>
-  </footer>
+    <!-- PIED DE PAGE -->
+    <footer>
+        <p>© 2026 DIZA COLLECTION - Tous droits réservés.</p>
+        <p>Merci de votre visite ❤️</p>
+    </footer>
 
 </body>
 </html>
