@@ -23,23 +23,24 @@
       background: #44372b;
       color: white;
       text-align: center;
-      padding: 30px 15px;
+      padding: 35px 15px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 35px;
+      font-size: 36px;
       letter-spacing: 3px;
     }
 
     header p {
       color: #e8d5b5;
+      font-size: 17px;
     }
 
     nav {
       background: #c5a46d;
       text-align: center;
-      padding: 15px;
+      padding: 16px;
     }
 
     nav a {
@@ -64,12 +65,13 @@
 
     .presentation p {
       font-size: 17px;
+      line-height: 1.6;
     }
 
     .section-titre {
       text-align: center;
-      margin-top: 35px;
-      font-size: 26px;
+      margin-top: 40px;
+      font-size: 27px;
     }
 
     .produits {
@@ -87,6 +89,11 @@
       width: 250px;
       text-align: center;
       box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+      transition: transform 0.3s;
+    }
+
+    .article:hover {
+      transform: translateY(-5px);
     }
 
     .article img {
@@ -101,9 +108,14 @@
     }
 
     .prix {
-      font-size: 20px;
+      font-size: 21px;
       font-weight: bold;
       color: #a47b39;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 35px 20px;
     }
 
     footer {
@@ -111,12 +123,11 @@
       color: white;
       text-align: center;
       padding: 30px 15px;
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
-    footer a {
-      color: #e8d5b5;
-      text-decoration: none;
+    footer p {
+      line-height: 1.6;
     }
 
     @media (max-width: 600px) {
@@ -126,7 +137,7 @@
 
       nav a {
         display: inline-block;
-        margin: 7px;
+        margin: 8px;
       }
 
       .article {
@@ -153,7 +164,7 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- PRÉSENTATION -->
+  <!-- ACCUEIL -->
   <section class="presentation" id="accueil">
     <h2>Bienvenue chez DIZA COLLECTION</h2>
 
@@ -176,19 +187,25 @@
 
     <div class="article">
       <h3>Robe élégante</h3>
-      <img src="diza-robe-femme.png" alt="Robe élégante">
+      <img
+        src="https://dizadelflow52-eng.github.io/mon-premier-site/diza-robe-femme.png"
+        alt="Robe élégante">
       <p class="prix">120 €</p>
     </div>
 
     <div class="article">
       <h3>Sac à main</h3>
-      <img src="diza-sac-a-main.png" alt="Sac à main">
+      <img
+        src="https://dizadelflow52-eng.github.io/mon-premier-site/diza-sac-a-main.png"
+        alt="Sac à main">
       <p class="prix">70,99 €</p>
     </div>
 
     <div class="article">
       <h3>Chaussures femme</h3>
-      <img src="diza-chaussures-femme.png" alt="Chaussures femme">
+      <img
+        src="https://dizadelflow52-eng.github.io/mon-premier-site/diza-chaussures-femme.png"
+        alt="Chaussures femme">
       <p class="prix">60,96 €</p>
     </div>
 
@@ -203,43 +220,52 @@
 
     <div class="article">
       <h3>Ensemble homme</h3>
-      <img src="diza-costume-homme.png" alt="Ensemble homme">
+      <img
+        src="https://dizadelflow52-eng.github.io/mon-premier-site/diza-costume-homme.png"
+        alt="Ensemble homme">
       <p class="prix">160 €</p>
     </div>
 
     <div class="article">
       <h3>Chaussures homme</h3>
-      <img src="diza-chaussures-homme.png" alt="Chaussures homme">
+      <img
+        src="https://dizadelflow52-eng.github.io/mon-premier-site/diza-chaussures-homme.png"
+        alt="Chaussures homme">
       <p class="prix">80,99 €</p>
     </div>
 
     <div class="article">
       <h3>Accessoires homme</h3>
-      <img src="diza-accessoires-homme.png" alt="Accessoires homme">
+      <img
+        src="https://dizadelflow52-eng.github.io/mon-premier-site/diza-accessoires-homme.png"
+        alt="Accessoires homme">
       <p class="prix">45,99 €</p>
     </div>
 
   </div>
 
-  <!-- CONTACT ET PIED DE PAGE -->
-  <footer id="contact">
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Contactez-nous</h2>
 
+    <p>Vous aimez nos articles ?</p>
+
+    <p>
+      Pour toute commande ou information,
+      contactez DIZA COLLECTION.
+    </p>
+  </section>
+
+  <!-- PIED DE PAGE -->
+  <footer>
     <h2>DIZA COLLECTION</h2>
 
     <p>Merci de visiter notre boutique !</p>
 
     <p>
-      Pour toute commande ou information,
-      contactez-nous.
-    </p>
-
-    <p>
       © 2026 DIZA COLLECTION - Tous droits réservés.
     </p>
-
   </footer>
 
 </body>
 </html>
-
-
