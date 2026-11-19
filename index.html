@@ -1,87 +1,245 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>DIZA COLLECTION</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f5f0;
+      color: #44372b;
+    }
+
+    header {
+      background: #44372b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 35px;
+      letter-spacing: 3px;
+    }
+
+    header p {
+      color: #e8d5b5;
+    }
+
+    nav {
+      background: #c5a46d;
+      text-align: center;
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #44372b;
+    }
+
+    .presentation {
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    .presentation h2 {
+      font-size: 28px;
+    }
+
+    .presentation p {
+      font-size: 17px;
+    }
+
+    .section-titre {
+      text-align: center;
+      margin-top: 35px;
+      font-size: 26px;
+    }
+
+    .produits {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 20px;
+    }
+
+    .article {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+    }
+
+    .article img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .article h3 {
+      color: #44372b;
+    }
+
+    .prix {
+      font-size: 20px;
+      font-weight: bold;
+      color: #a47b39;
+    }
+
+    footer {
+      background: #44372b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #e8d5b5;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 27px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 7px;
+      }
+
+      .article {
+        width: 90%;
+        max-width: 300px;
+      }
+    }
+  </style>
 </head>
 
-<body style="margin:0; font-family:Arial,sans-serif; background:#f8f5f0; color:#44372b;">
+<body>
 
-<header style="background:#44372b;color:white;text-align:center;padding:30px;">
-  <h1>DIZA COLLECTION</h1>
-  <p>La mode pour tous, avec élégance.</p>
+  <!-- EN-TÊTE -->
+  <header>
+    <h1>DIZA COLLECTION</h1>
+    <p>Élégance, beauté et style</p>
+  </header>
+
+  <!-- MENU -->
   <nav>
-    <a href="#accueil" style="color:white;margin:10px;">Accueil</a>
-    <a href="#femmes" style="color:white;margin:10px;">Femmes</a>
-    <a href="#hommes" style="color:white;margin:10px;">Hommes</a>
-    <a href="#contact" style="color:white;margin:10px;">Contact</a>
+    <a href="#accueil">Accueil</a>
+    <a href="#femmes">Femmes</a>
+    <a href="#hommes">Hommes</a>
+    <a href="#contact">Contact</a>
   </nav>
-</header>
 
-<section id="accueil" style="text-align:center;padding:60px 20px;background:#eee2d2;">
-  <h2>Bienvenue chez DIZA COLLECTION</h2>
-  <p>Découvrez notre collection de vêtements, chaussures et accessoires.</p>
-</section>
+  <!-- PRÉSENTATION -->
+  <section class="presentation" id="accueil">
+    <h2>Bienvenue chez DIZA COLLECTION</h2>
 
-<section id="femmes" style="padding:40px 20px;text-align:center;">
-  <h2>Nos articles pour femmes</h2>
+    <p>
+      Découvrez notre collection de vêtements,
+      chaussures, sacs et accessoires.
+    </p>
 
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;">
+    <p>
+      Trouvez votre style et affirmez votre élégance !
+    </p>
+  </section>
 
-    <div style="background:white;padding:20px;border-radius:10px;width:220px;">
+  <!-- ARTICLES FEMMES -->
+  <h2 class="section-titre" id="femmes">
+    Nos articles pour femmes
+  </h2>
+
+  <div class="produits">
+
+    <div class="article">
       <h3>Robe élégante</h3>
-      <img src="diza-robe-femme.png" alt="Robe élégante" style="width:100%;max-width:200px;border-radius:10px;">
-      <p>120 €</p>
+      <img src="diza-robe-femme.png" alt="Robe élégante">
+      <p class="prix">120 €</p>
     </div>
 
-    <div style="background:white;padding:20px;border-radius:10px;width:220px;">
+    <div class="article">
       <h3>Sac à main</h3>
-      <img src="diza-sac-a-main.png" alt="Sac à main" style="width:100%;max-width:200px;border-radius:10px;">
-      <p>70,99 €</p>
+      <img src="diza-sac-a-main.png" alt="Sac à main">
+      <p class="prix">70,99 €</p>
     </div>
 
-    <div style="background:white;padding:20px;border-radius:10px;width:220px;">
+    <div class="article">
       <h3>Chaussures femme</h3>
-      <img src="diza-chaussures-femme.png" alt="Chaussures femme" style="width:100%;max-width:200px;border-radius:10px;">
-      <p>60,96 €</p>
+      <img src="diza-chaussures-femme.png" alt="Chaussures femme">
+      <p class="prix">60,96 €</p>
     </div>
 
   </div>
-</section>
 
-<section id="hommes" style="padding:40px 20px;text-align:center;background:#eee2d2;">
-  <h2>Nos articles pour hommes</h2>
+  <!-- ARTICLES HOMMES -->
+  <h2 class="section-titre" id="hommes">
+    Nos articles pour hommes
+  </h2>
 
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;">
+  <div class="produits">
 
-    <div style="background:white;padding:20px;border-radius:10px;width:220px;">
+    <div class="article">
       <h3>Ensemble homme</h3>
-      <img src="diza-costume-homme.png" alt="Ensemble homme" style="width:100%;max-width:200px;border-radius:10px;">
-      <p>160 €</p>
+      <img src="diza-costume-homme.png" alt="Ensemble homme">
+      <p class="prix">160 €</p>
     </div>
 
-    <div style="background:white;padding:20px;border-radius:10px;width:220px;">
+    <div class="article">
       <h3>Chaussures homme</h3>
-      <img src="diza-chaussures-homme.png" alt="Chaussures homme" style="width:100%;max-width:200px;border-radius:10px;">
-      <p>80,99 €</p>
+      <img src="diza-chaussures-homme.png" alt="Chaussures homme">
+      <p class="prix">80,99 €</p>
     </div>
 
-    <div style="background:white;padding:20px;border-radius:10px;width:220px;">
+    <div class="article">
       <h3>Accessoires homme</h3>
-      <img src="diza-accessoires-homme.png" alt="Accessoires homme" style="width:100%;max-width:200px;border-radius:10px;">
-      <p>45,99 €</p>
+      <img src="diza-accessoires-homme.png" alt="Accessoires homme">
+      <p class="prix">45,99 €</p>
     </div>
 
   </div>
-</section>
 
-<footer id="contact" style="background:#44372b;color:white;text-align:center;padding:35px 20px;">
-  <h2 style="color:#e9dcc9;">DIZA COLLECTION</h2>
-  <p>Merci de visiter notre boutique !</p>
-  <p>Pour toute commande ou information, contactez-nous.</p>
-  <p>© 2026 DIZA COLLECTION - Tous droits réservés.</p>
-</footer>
+  <!-- CONTACT ET PIED DE PAGE -->
+  <footer id="contact">
+
+    <h2>DIZA COLLECTION</h2>
+
+    <p>Merci de visiter notre boutique !</p>
+
+    <p>
+      Pour toute commande ou information,
+      contactez-nous.
+    </p>
+
+    <p>
+      © 2026 DIZA COLLECTION - Tous droits réservés.
+    </p>
+
+  </footer>
 
 </body>
-</html> 
+</html>
+
+
