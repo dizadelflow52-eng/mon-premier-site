@@ -1,104 +1,283 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DIZA COLLECTION - Sacs à main</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIZA COLLECTION | Sacs de luxe</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8f5f0;
-      color: #44372b;
-      text-align: center;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    header {
-      background: #44372b;
-      color: white;
-      padding: 35px 15px;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f5ef;
+  color: #44372b;
+}
 
-    header h1 {
-      color: #e6c78b;
-      font-size: 32px;
-    }
+header {
+  background: #44372b;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
 
-    .collection {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      padding: 30px 15px;
-    }
+.logo {
+  color: #e3c27b;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
 
-    .sac {
-      background: white;
-      width: 230px;
-      padding: 15px;
-      border-radius: 15px;
-      box-shadow: 0 3px 12px #00000015;
-    }
+.couronne {
+  color: #e3c27b;
+  font-size: 30px;
+}
 
-    .sac img {
-      width: 100%;
-      height: 220px;
-      object-fit: contain;
-      border-radius: 10px;
-    }
+nav {
+  background: #e9dfce;
+  padding: 15px;
+  text-align: center;
+}
 
-    .sac h3 {
-      color: #8b6b3f;
-    }
+nav a {
+  color: #44372b;
+  text-decoration: none;
+  margin: 10px;
+  font-weight: bold;
+}
 
-    .prix {
-      font-size: 20px;
-      font-weight: bold;
-    }
+.hero {
+  text-align: center;
+  padding: 65px 20px;
+  background: #eee4d4;
+}
 
-    footer {
-      background: #44372b;
-      color: white;
-      padding: 20px;
-    }
-  </style>
+.hero h1 {
+  font-size: 34px;
+  color: #755a35;
+}
+
+.hero p {
+  font-size: 17px;
+}
+
+.bouton {
+  display: inline-block;
+  background: #9a7744;
+  color: white;
+  padding: 13px 25px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+section {
+  padding: 35px 15px;
+  text-align: center;
+}
+
+section h2 {
+  color: #947344;
+  font-size: 27px;
+}
+
+.produits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.produit {
+  background: white;
+  width: 250px;
+  padding: 17px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #00000012;
+}
+
+.produit img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.produit h3 {
+  color: #755a35;
+}
+
+.prix {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.panier {
+  background: white;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+footer {
+  background: #44372b;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+footer span {
+  color: #e3c27b;
+}
+
+@media(max-width:600px) {
+  .hero h1 {
+    font-size: 27px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 7px;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>DIZA COLLECTION</h1>
-  <h2>Collection de sacs à main</h2>
-  <p>L'élégance et le luxe dans chaque détail</p>
+  <div class="couronne">♛</div>
+  <div class="logo">DIZA COLLECTION</div>
+  <p>LE LUXE DANS CHAQUE DÉTAIL</p>
 </header>
 
-<h2 style="color:#8b6b3f; margin-top:35px;">
-  NOS SACS À MAIN
-</h2>
+<nav>
+  <a href="#accueil">Accueil</a>
+  <a href="#femme">Sacs femme</a>
+  <a href="#homme">Sacs homme</a>
+  <a href="#panier">Mon panier</a>
+</nav>
 
-<div class="collection">
-
-  <div class="sac">
-    <img src="diza-sac-a-main.png" alt="Sac à main classique">
-    <h3>Sac à main classique</h3>
-    <p class="prix">1 500 €</p>
-  </div>
-
-  <div class="sac">
-    <img src="diza-sac-a-main-2.png" alt="Sac à main chic">
-    <h3>Sac à main chic</h3>
-    <p class="prix">1 500 €</p>
-  </div>
-
+<div class="hero" id="accueil">
+  <h1>Bienvenue chez DIZA COLLECTION</h1>
+  <p>Découvrez notre univers de sacs élégants et raffinés.</p>
+  <p>Des modèles pour femmes et hommes.</p>
+  <a href="#femme" class="bouton">Découvrir la collection</a>
 </div>
 
+<section id="femme">
+  <h2>Collection Femme</h2>
+  <p>Élégance, beauté et raffinement.</p>
+
+  <div class="produits">
+
+    <div class="produit">
+      <img src="diza-sac-a-main.png" alt="Sac femme classique">
+      <h3>Sac à main classique</h3>
+      <p class="prix">1 500 €</p>
+      <button class="bouton" onclick="ajouter('Sac à main classique',1500)">
+        Ajouter au panier
+      </button>
+    </div>
+
+    <div class="produit">
+      <img src="diza-sac-a-main-2.png" alt="Sac femme chic">
+      <h3>Sac à main chic</h3>
+      <p class="prix">1 500 €</p>
+      <button class="bouton" onclick="ajouter('Sac à main chic',1500)">
+        Ajouter au panier
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<section id="homme">
+  <h2>Collection Homme</h2>
+  <p>Un style distingué et moderne.</p>
+
+  <div class="produits">
+
+    <div class="produit">
+      <img src="diza-sac-homme.png" alt="Sac homme élégant">
+      <h3>Sac homme élégant</h3>
+      <p class="prix">1 500 €</p>
+      <button class="bouton" onclick="ajouter('Sac homme élégant',1500)">
+        Ajouter au panier
+      </button>
+    </div>
+
+    <div class="produit">
+      <img src="diza-sac-homme-2.png" alt="Sac homme moderne">
+      <h3>Sac homme moderne</h3>
+      <p class="prix">1 500 €</p>
+      <button class="bouton" onclick="ajouter('Sac homme moderne',1500)">
+        Ajouter au panier
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<section id="panier">
+  <h2>Mon panier</h2>
+
+  <div class="panier">
+    <div id="articles">Votre panier est vide.</div>
+    <h3 id="total">Total : 0 €</h3>
+    <button class="bouton" onclick="viderPanier()">
+      Vider le panier
+    </button>
+  </div>
+</section>
+
 <footer>
-  <h3>DIZA COLLECTION</h3>
-  <p>Merci de votre visite ❤️</p>
+  <h2><span>♛ DIZA COLLECTION</span></h2>
+  <p>Merci de votre visite.</p>
+  <p>© 2026 DIZA COLLECTION - Tous droits réservés</p>
 </footer>
+
+<script>
+let panier = [];
+
+function ajouter(nom, prix) {
+  panier.push({nom: nom, prix: prix});
+  afficherPanier();
+  alert("Produit ajouté au panier !");
+}
+
+function afficherPanier() {
+  let zone = document.getElementById("articles");
+  let total = 0;
+
+  if (panier.length === 0) {
+    zone.innerHTML = "Votre panier est vide.";
+  } else {
+    zone.innerHTML = panier.map(article =>
+      "<p>" + article.nom + " - " +
+      article.prix.toLocaleString("fr-FR") + " €</p>"
+    ).join("");
+  }
+
+  panier.forEach(article => total += article.prix);
+
+  document.getElementById("total").textContent =
+    "Total : " + total.toLocaleString("fr-FR") + " €";
+}
+
+function viderPanier() {
+  panier = [];
+  afficherPanier();
+}
+</script>
 
 </body>
 </html>
-
            
