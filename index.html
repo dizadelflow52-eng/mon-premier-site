@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIZA COLLECTION | Sacs de luxe</title>
+<title>DIZA COLLECTION | Boutique de sacs</title>
 
 <style>
 * {
@@ -24,6 +24,11 @@ header {
   padding: 30px 15px;
 }
 
+.couronne {
+  color: #e3c27b;
+  font-size: 35px;
+}
+
 .logo {
   color: #e3c27b;
   font-size: 32px;
@@ -31,44 +36,35 @@ header {
   letter-spacing: 3px;
 }
 
-.couronne {
-  color: #e3c27b;
-  font-size: 30px;
-}
-
 nav {
   background: #e9dfce;
-  padding: 15px;
+  padding: 16px;
   text-align: center;
 }
 
 nav a {
   color: #44372b;
   text-decoration: none;
-  margin: 10px;
+  margin: 12px;
   font-weight: bold;
 }
 
 .hero {
+  background: #eee4d4;
   text-align: center;
   padding: 65px 20px;
-  background: #eee4d4;
 }
 
 .hero h1 {
-  font-size: 34px;
   color: #755a35;
-}
-
-.hero p {
-  font-size: 17px;
+  font-size: 34px;
 }
 
 .bouton {
   display: inline-block;
   background: #9a7744;
   color: white;
-  padding: 13px 25px;
+  padding: 13px 22px;
   border: none;
   border-radius: 6px;
   text-decoration: none;
@@ -99,7 +95,7 @@ section h2 {
   width: 250px;
   padding: 17px;
   border-radius: 12px;
-  box-shadow: 0 3px 12px #00000012;
+  box-shadow: 0 3px 12px #00000015;
 }
 
 .produit img {
@@ -167,19 +163,19 @@ footer span {
 
 <div class="hero" id="accueil">
   <h1>Bienvenue chez DIZA COLLECTION</h1>
-  <p>Découvrez notre univers de sacs élégants et raffinés.</p>
-  <p>Des modèles pour femmes et hommes.</p>
-  <a href="#femme" class="bouton">Découvrir la collection</a>
+  <p>Découvrez notre collection exclusive de sacs élégants.</p>
+  <p>Le raffinement pour femmes et hommes.</p>
+  <a href="#femme" class="bouton">Découvrir nos sacs</a>
 </div>
 
 <section id="femme">
-  <h2>Collection Femme</h2>
-  <p>Élégance, beauté et raffinement.</p>
+  <h2>COLLECTION FEMME</h2>
+  <p>Des sacs élégants pour sublimer votre style.</p>
 
   <div class="produits">
 
     <div class="produit">
-      <img src="diza-sac-a-main.png" alt="Sac femme classique">
+      <img src="diza-sac-a-main.png" alt="Sac à main classique">
       <h3>Sac à main classique</h3>
       <p class="prix">1 500 €</p>
       <button class="bouton" onclick="ajouter('Sac à main classique',1500)">
@@ -188,7 +184,7 @@ footer span {
     </div>
 
     <div class="produit">
-      <img src="diza-sac-a-main-2.png" alt="Sac femme chic">
+      <img src="diza-sac-a-main-2.png" alt="Sac à main chic">
       <h3>Sac à main chic</h3>
       <p class="prix">1 500 €</p>
       <button class="bouton" onclick="ajouter('Sac à main chic',1500)">
@@ -200,8 +196,8 @@ footer span {
 </section>
 
 <section id="homme">
-  <h2>Collection Homme</h2>
-  <p>Un style distingué et moderne.</p>
+  <h2>COLLECTION HOMME</h2>
+  <p>Un style moderne et distingué.</p>
 
   <div class="produits">
 
@@ -227,7 +223,7 @@ footer span {
 </section>
 
 <section id="panier">
-  <h2>Mon panier</h2>
+  <h2>MON PANIER</h2>
 
   <div class="panier">
     <div id="articles">Votre panier est vide.</div>
@@ -240,7 +236,7 @@ footer span {
 
 <footer>
   <h2><span>♛ DIZA COLLECTION</span></h2>
-  <p>Merci de votre visite.</p>
+  <p>L'élégance et le luxe dans chaque détail.</p>
   <p>© 2026 DIZA COLLECTION - Tous droits réservés</p>
 </footer>
 
@@ -250,7 +246,6 @@ let panier = [];
 function ajouter(nom, prix) {
   panier.push({nom: nom, prix: prix});
   afficherPanier();
-  alert("Produit ajouté au panier !");
 }
 
 function afficherPanier() {
@@ -258,11 +253,12 @@ function afficherPanier() {
   let total = 0;
 
   if (panier.length === 0) {
-    zone.innerHTML = "Votre panier est vide.";
+    zone.textContent = "Votre panier est vide.";
   } else {
-    zone.innerHTML = panier.map(article =>
+    zone.innerHTML = panier.map((article, index) =>
       "<p>" + article.nom + " - " +
-      article.prix.toLocaleString("fr-FR") + " €</p>"
+      article.prix.toLocaleString("fr-FR") +
+      " € <button onclick='supprimer(" + index + ")'>Retirer</button></p>"
     ).join("");
   }
 
@@ -270,6 +266,11 @@ function afficherPanier() {
 
   document.getElementById("total").textContent =
     "Total : " + total.toLocaleString("fr-FR") + " €";
+}
+
+function supprimer(index) {
+  panier.splice(index, 1);
+  afficherPanier();
 }
 
 function viderPanier() {
@@ -280,4 +281,3 @@ function viderPanier() {
 
 </body>
 </html>
-           
